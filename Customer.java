@@ -25,35 +25,37 @@ public class Customer extends User{
   // start
   public void start(){
     if (login()){
-      System.out.println("login successful");
+      System.out.println("login successful!");
+      startCustomerMenu();
+    }
+    else{
+      System.out.println("login failed!");
+    }
+  } // end start
 
-      String choice = "";
+  // startCustomerMenu
+  public void startCustomerMenu(){
+    String choice = "";
 
-      while (!choice.equals("0")){
-        choice = menu();
+    while (!choice.equals("0")){
+      choice = menu();
 
-        if (choice.equals("1")){
-          System.out.println("checking Account");
-          checking.start();
-        }
-        else if (choice.equals("2")){
-          System.out.println("savings Account");
-          savings.start();
-        }
-        else if (choice.equals("3")){
-          changePin();
-        }
-        else if (!choice.equals("0")){
-          System.out.println("invalid! please choose 0-3!");
-        }
+      if (choice.equals("1")){
+        System.out.println("checking account");
+        checking.start();
+      }
+      else if (choice.equals("2")){
+        System.out.println("savings account");
+        savings.start();
+      }
+      else if (choice.equals("3")){
+        changePin();
+      }
+      else if (!choice.equals("0")){
+        System.out.println("invalid! please choose 0-3!");
       }
     }
-
-    else{
-      System.out.println("login failed");
-    }
-
-  } // end start
+  } // end startCustomerMenu
 
   // menu
   public String menu(){

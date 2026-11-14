@@ -9,7 +9,7 @@ public abstract class User implements HasMenu, Serializable{
 
   // login
   public boolean login(){
-    System.out.print("User name: ");
+    System.out.print("user name: ");
     String enteredUserName = input.next();
 
     System.out.print("PIN: ");

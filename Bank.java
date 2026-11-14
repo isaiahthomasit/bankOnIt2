@@ -113,7 +113,7 @@ public class Bank implements HasMenu{
 
     if (currentCustomer != null){
       System.out.println("login successful!");
-      currentCustomer.start();
+      currentCustomer.startCustomerMenu();
     }
     else{
       System.out.println("customer login failed!");
