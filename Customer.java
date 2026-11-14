@@ -25,7 +25,7 @@ public class Customer extends User{
   // start
   public void start(){
     if (login()){
-      System.out.println("Login Successful");
+      System.out.println("login successful");
 
       String choice = "";
 
@@ -33,11 +33,11 @@ public class Customer extends User{
         choice = menu();
 
         if (choice.equals("1")){
-          System.out.println("Checking Account");
+          System.out.println("checking Account");
           checking.start();
         }
         else if (choice.equals("2")){
-          System.out.println("Savings Account");
+          System.out.println("savings Account");
           savings.start();
         }
         else if (choice.equals("3")){
@@ -50,7 +50,7 @@ public class Customer extends User{
     }
 
     else{
-      System.out.println("Login Failed");
+      System.out.println("login failed");
     }
 
   } // end start
@@ -77,6 +77,16 @@ public class Customer extends User{
 
     System.out.println("PIN successfully changed!");
   } // end changePin
+
+  // getCheckingAccount
+  public CheckingAccount getCheckingAccount(){
+    return checking;
+  } // end getCheckingAccount
+
+  // getSavingsAccount
+  public SavingsAccount getSavingsAccount(){
+    return savings;
+  } // getSavingsAccount
 
   // getReport
   public String getReport(){
