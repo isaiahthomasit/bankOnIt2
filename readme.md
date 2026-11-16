@@ -148,12 +148,3 @@ initialize loadCustomers{
   }
 } // end loadCustomers
 ```
-  
-
-    
-
-    
-
-
-
-}
